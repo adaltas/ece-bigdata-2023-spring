@@ -13,7 +13,7 @@
 
 Using the official [HDFS DFS Commands Guide](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/FileSystemShell.html):
 
-1. Create a directory named after your `$USER` in your group HDFS directory. E.g. `/education/ece_2022_fall_bda_1/$USER`
+1. Create a directory named after your `$USER` in your group HDFS directory. E.g. `/education/ece_2023_spring_app_1/$USER`
 2. Create a subdirectory `lab2` in the directory created in 1.
 3. Create a file named `sentence1.txt` on the local file system and write a sentence inside that file
 4. Copy the file to your `lab2` HDFS directory
@@ -94,11 +94,11 @@ The WordCount example is also located in the MapReduce example JAR. It takes sev
 - 1 or more input directory
 - 1 output directory
 
-1. Look at the content of the input directory we will use: `/education/ece_2022_fall_bda_1/resources/lab2`
+1. Look at the content of the input directory we will use: `/education/ece_2023_spring_app_1/resources/lab2`
 2. Run the command:
    ```bash
    yarn jar /usr/hdp/current/hadoop-mapreduce-client/hadoop-mapreduce-examples-3.1.1.3.1.0.0-78.jar \
-    wordcount /education/ece_2022_fall_bda_1/resources/lab2 \
-    /education/ece_2022_fall_bda_1/$USER/lab2/output-moby-dick
+    wordcount /education/ece_2023_spring_app_1/resources/lab2 \
+    /education/ece_2023_spring_app_1/$USER/lab2/output-moby-dick
    ```
 3. Check out the output directory

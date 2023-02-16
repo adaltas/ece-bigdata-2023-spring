@@ -22,8 +22,9 @@ You should have received an email from Adaltas containing a `.ovpn` file that yo
 2. Import the `.ovpn` file to the client (the way to do so depends on your OS and your client, read the docs!)
 3. Start the VPN connection
 4. Test that everything is working by pinging the edge server:
-   ```
+   ```bash
    ping edge-1.au.adaltas.cloud
+   # 64 bytes from edge-1.au.adaltas.cloud (10.0.0.63): icmp_seq=5 ttl=63 time=56.2 ms
    ```
 
 ### Troubleshooting

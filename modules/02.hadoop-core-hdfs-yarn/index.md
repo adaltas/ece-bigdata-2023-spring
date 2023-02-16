@@ -56,11 +56,10 @@ Other distributed architectures?
 ## HDFS: Architecture
 
 - **NameNode** (= master): Handles file system metadata. For each file, it knows
-
   - The path of the file in HDFS
   - The blocks that compose the file
   - The position of each block in the cluster
-
+  
 - **DataNodes** (= workers):
 
   - Store the blocks on disks (hardware optimization)

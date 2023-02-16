@@ -36,8 +36,8 @@ A distributed system is a group of computers that appear as a unique and coheren
 
   ```sh
   # CSV
-  firstname,lastname,birthdate,address
-  Gauthier,Leonard,20220930,Blabla
+  firstname,lastname,birthdate,address\n
+  Gauthier,Leonard,20220930,Blabla\n
   ```
 
   ```json
@@ -51,7 +51,14 @@ A distributed system is a group of computers that appear as a unique and coheren
     {
       "firstname": "Toto",
       "lastname": null,
-      "birthdate": "20220803"
+      "birthdate": "20220803",
+      "address": {
+          "city": "Paris",
+          "country": {
+              "name": "France",
+              "code": 33
+          }
+      }
     }
   ]
   ```
@@ -77,6 +84,10 @@ A distributed system is a group of computers that appear as a unique and coheren
 - Data explosion
 - Data created and used by everyone
 - End of Moore law
+
+**2015-20??:** the Cloud = "unlimited" storage
+
+- https://motherduck.com/blog/big-data-is-dead/
 
 ## Distributed systems
 
@@ -112,14 +123,14 @@ Disadvantages:
 - To save and process all the all data generated
   - E.g. Google processes 100 million pages per day
 - To deliver near real time results
-  - E.g. Google search results < 1 sec, Facebook Messenger
+  - E.g. Google search results < 0.1 sec, Facebook Messenger
 
 ## Big Data: The 3 Vs - Variety
 
 - All types of data
 - 20% structured or semi-structured, 80% unstructured
 
-## Who needs Big Data?
+## Who needs Big Data technologies?
 
 - Not only GAFAM
 - For "normal" enterprises (where data is not at the core of the business)
