@@ -20,25 +20,25 @@ uncommonly      6
 uncompromised   1
 ```
 
-1. Clone the repo [ece-bigdata-2022-fall](https://github.com/adaltas/ece-bigdata-2022-fall.git) in your home on the edge node:
+1. Clone the repo [ece-bigdata-2023-spring](https://github.com/adaltas/ece-bigdata-2023-spring.git) in your home on the edge node:
    ```bash
-   git clone https://github.com/adaltas/ece-bigdata-2022-fall.git
+   git clone https://github.com/adaltas/ece-bigdata-2023-spring.git
    ```
 2. Go to the `modules/03.the-mapreduce-framework/lab-resources/code` directory:
    ```bash
    cd modules/03.the-mapreduce-framework/lab-resources/code
    ```
 3. Take a look at the `word_count/mapper.py` and `word_count/reducer.py` files. Tip: open with `vim` for syntax highlighting.
-4. Take a look at the input we will use for the MapReduce in HDFS at `/education/ece_2022_fall_bda_1/resources/lab3/mapred-input`
+4. Take a look at the input we will use for the MapReduce in HDFS at `/education/ece_2023_spring_app_1/resources/lab3/mapred-input`
 5. The following command will run a MapReduce with 2 reducers, so it will produce 2 output files:
    ```bash
    mapred streaming -D mapreduce.job.reduces=2 \
      -files word_count/mapper.py,word_count/reducer.py \
-     -input /education/ece_2022_fall_bda_1/resources/lab3/mapred-input \
-     -output /education/ece_2022_fall_bda_1/$USER/lab3/word-count \
+     -input /education/ece_2023_spring_app_1/resources/lab3/mapred-input \
+     -output /education/ece_2023_spring_app_1/$USER/lab3/word-count \
      -mapper "python3 mapper.py" -reducer "python3 reducer.py"
    ```
-6. Check the output at `/education/ece_2022_fall_bda_1/$USER/lab3/word-count`
+6. Check the output at `/education/ece_2023_spring_app_1/$USER/lab3/word-count`
 
 ### Design a MapReduce job to get the most frequent word
 
