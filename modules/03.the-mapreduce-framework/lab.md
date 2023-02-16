@@ -11,6 +11,8 @@
 
 ### Run a Python MapReduce word count job using Hadoop Streaming
 
+![Hadoop Streaming](/home/gauthier/Education/ece/ece-bigdata-2023-spring/modules/03.the-mapreduce-framework/assets/hadoop-streaming.jpg)
+
 We will run a MapReduce job that does a word count on text files. It will return the list of words found it the input and the occurence of each one:
 
 ```
@@ -26,7 +28,7 @@ uncompromised   1
    ```
 2. Go to the `modules/03.the-mapreduce-framework/lab-resources/code` directory:
    ```bash
-   cd modules/03.the-mapreduce-framework/lab-resources/code
+   cd ece-bigdata-2023-spring/modules/03.the-mapreduce-framework/lab-resources/code
    ```
 3. Take a look at the `word_count/mapper.py` and `word_count/reducer.py` files. Tip: open with `vim` for syntax highlighting.
 4. Take a look at the input we will use for the MapReduce in HDFS at `/education/ece_2023_spring_app_1/resources/lab3/mapred-input`

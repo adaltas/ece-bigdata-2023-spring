@@ -1,4 +1,5 @@
 import sys
+import re
 
 
 def write_kv_array(kv_array):
@@ -11,6 +12,7 @@ def text_to_words(text):
 
     for line in text:
         for word in line.strip().split():
+            word = re.sub(r'[^\w]', '', word).lower()
             key_values.append({'key': word, 'value': 1})
 
     return key_values
