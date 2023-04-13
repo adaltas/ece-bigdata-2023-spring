@@ -21,11 +21,11 @@ id,author,genre,quantity
 3. Le nombre d'ecrit par genre
 
 
-3. Ranking number des auteurs par nombre de livre ecrit:
+4. Ranking number des auteurs par nombre de livre ecrit:
 
 Ex:
 ranking,author,genre,quantity
-1,jason.dawson,thriller,90
+1,,thriller,90
 2,leonard.lewis,thriller,81
 3,max.mcBride,romance,75
 4,earl.walton,romance,40
@@ -39,6 +39,42 @@ ranking,author,genre,quantity
 https://sparkbyexamples.com/spark/spark-sql-window-functions/
 
 
+5. Charger l'ensemble suivant
+
+val input = Seq(
+  ("100","John", Some(35),None),
+  ("100","John", None,Some("Georgia")),
+  ("101","Mike", Some(25),None),
+  ("101","Mike", None,Some("New York")),
+  ("103","Mary", Some(22),None),
+  ("103","Mary", None,Some("Texas")),
+  ("104","Smith", Some(25),None),
+  ("105","Jake", None,Some("Florida"))).toDF("id", "name", "age", "city")
+
+scala> input.show
++---+-----+----+--------+
+| id| name| age|    city|
++---+-----+----+--------+
+|100| John|  35|    null|
+|100| John|null| Georgia|
+|101| Mike|  25|    null|
+|101| Mike|null|New York|
+|103| Mary|  22|    null|
+|103| Mary|null|   Texas|
+|104|Smith|  25|    null|
+|105| Jake|null| Florida|
++---+-----+----+--------+
 
 
+6. fusionner les cellules de meme id:
 
+scala> solution.show()
++---+-----+----+--------+
+|id |name |age |city    |
++---+-----+----+--------+
+|100|John |35  |Georgia |
+|101|Mike |25  |New York|
+|103|Mary |22  |Texas   |
+|104|Smith|25  |null    |
+|105|Jake |null|Florida |
++---+-----+----+--------+
