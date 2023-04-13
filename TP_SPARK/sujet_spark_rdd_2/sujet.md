@@ -16,10 +16,29 @@ id,author,genre,quantity
 
 
 
-
 2. Charger le csv en dataframe dans Spark
 
+3. Le nombre d'ecrit par genre
 
-3. La quantité d'oeuvres par genre
+
+3. Ranking number des auteurs par nombre de livre ecrit:
+
+Ex:
+ranking,author,genre,quantity
+1,jason.dawson,thriller,90
+2,leonard.lewis,thriller,81
+3,max.mcBride,romance,75
+4,earl.walton,romance,40
+5,clyde.matthews,thriller,31
+6,owen.boone,sci-fi,27
+7,andre.grant,thriller,25
+8,alan.hanson,romance,24
+9,hunter.fields,romance,15
+10,josephine.leonard,thriller,1
+
+https://sparkbyexamples.com/spark/spark-sql-window-functions/
+
+
+
 
 
